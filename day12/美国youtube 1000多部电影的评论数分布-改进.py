@@ -1,5 +1,4 @@
 import numpy as np
-from matplotlib import pyplot as plt
 
 us_file_path = "./youtube_video_data/US_video_data_numbers.csv"
 uk_file_path = "./youtube_video_data/GB_video_data_numbers.csv"

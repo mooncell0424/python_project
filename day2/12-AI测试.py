@@ -12,4 +12,5 @@ def sum_odd_numbers():
 
 
 sum_odd_numbers()
-# 写个快排
+#帮我写个快排
+
