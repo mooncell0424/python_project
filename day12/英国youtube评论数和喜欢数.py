@@ -26,3 +26,4 @@ plt.ylabel("comment")
 plt.scatter(t_uk_like,t_uk_comment)  #画散点图,观察横轴和纵轴的关系
 
 plt.show()
+
