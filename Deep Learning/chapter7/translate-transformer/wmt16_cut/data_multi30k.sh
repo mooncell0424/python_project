@@ -8,7 +8,7 @@ cat $1/train_trg.cut.txt >> $1/train_l
 # 生成词表，subword方式,统一用10000个subword
 subword-nmt learn-joint-bpe-and-vocab \
     -i $1/train_l \  # 输入文件
-    -s 10000 \  # 生成10000个subword
+    -s 20000 \  # 生成20000个subword
     -o $1/bpe.10000 \  # 输出bpe文件
     --write-vocabulary $1/vocab # 输出词表文件，包含所有的subword和原始词汇
 
