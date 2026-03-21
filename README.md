@@ -1,3 +1,50 @@
-# python_project
-### 1.Transformer翻译
-### 2.GLM4-9B微调
+# 🚀 AI-Algorithm-Practice-Hub 
+
+本仓库记录了本人在人工智能大模型底座与微调方向的核心算法复现与工程实践。主要包含两个核心模块：**基于 Transformer 的机器翻译模型实践**，以及**基于 GLM-4 与 BERT 的大模型微调实践与算法对比**。
+
+本项目拒绝调用高度封装的高层 API 进行“黑盒”训练，所有核心机制（如多头注意力、掩码机制、LoRA 降维推演等）均通过 PyTorch 进行底层代码实现，以探究复杂算法的数学推导与工程落地细节。
+
+---
+
+## 🛠️ 项目一：基于 Transformer 的机器翻译模型实践
+
+**项目描述：** 依托云端算力，基于 WMT16 语料库跑通机器翻译全流程，通过代码实践学习并梳理 Transformer 的核心架构与基础调优策略。
+
+### ✨ 核心亮点
+- **数据处理：** 梳理自定义 Tokenizer 的文本编解码逻辑。实践了按 token 长度动态分组的批量采样（Dynamic Batching）策略，有效提升了训练吞吐量。
+- **模型搭建：** 剖析 Encoder-Decoder 架构。重点梳理了多头注意力机制的具体实现，以及自注意力与交叉注意力中 Padding Mask 与 Look-ahead Mask 的协同作用。
+- **训练优化：** 实践了主流的训练技巧，验证了标签平滑（Label Smoothing）与 Noam 学习率调度对模型收敛的积极作用，并加入早停机制防止过拟合。
+- **推理评估：** 使用 BLEU-4 指标完成翻译质量的量化评估；通过绘制注意力热力图，直观观察了模型在翻译过程中的词汇对齐与注意力分布情况。
+
+### 📊 结果可视化
+*(提示：在这里插入你做 PPT 用的 Loss 曲线图和注意力热力图)*
+<div align="center">
+  <img src="[<img width="828" height="493" alt="image" src="https://github.com/user-attachments/assets/5950c359-cd4c-417e-bfc8-086f9e56f293" />
+]" width="45%" />
+  <img src="[<img width="739" height="467" alt="image" src="https://github.com/user-attachments/assets/624463d4-1175-46fa-aa01-e49817c6d05b" />
+]" width="45%" />
+  <img src="[<img width="739" height="467" alt="image" src="https://github.com/user-attachments/assets/cfc6bf8c-2772-4754-beab-09d89aecd3fd" />
+]" width="45%" />
+</div>
+<p align="center"><i>图 1：左图为引入 Noam 调度后的 Loss 收敛曲线；右图为交叉注意力机制的词汇对齐热力图</i></p>
+
+---
+
+## 🔬 项目二：大语言模型微调与 PEFT 算法对比分析
+
+**项目描述：** 依托云端算力，熟悉 transformers 库的大模型微调流程；并通过在较小规模模型上的代码复现，加深对主流参数高效微调（PEFT）算法原理的理解。
+
+### ✨ 核心亮点
+- **微调流程跑通：** 熟悉 Hugging Face 生态基础调用。在 AutoDL 算力下，跑通了 GLM4-9B 模型的指令微调流程，掌握了数据预处理及微调脚本的配置运行。
+- **微调算法探究：** 在阿里云平台上，以经典的 BERT 模型为基座，结合 SST-2 情感分类数据集，尝试编写并测试了 LoRA 与 Prefix-Tuning 的基础实现代码，验证了算法逻辑。
+- **策略对比学习：** 梳理了 LoRA、P-Tuning、Adapter     等主流 PEFT 技术的结构差异。设计并执行了多组对比实验，初步量化分析了不同微调策略对验证集准确率的影响。
+
+### 📊 效能对比
+*(提示：在这里插入你那张极其漂亮的 PEFT 准确率对比折线图)*
+<div align="center">
+  <img src="[<img width="1068" height="628" alt="image" src="https://github.com/user-attachments/assets/c37e953d-d8e2-49c9-9430-1edad7eb08e2" />
+]" width="70%" />
+</div>
+<p align="center"><i>不同 PEFT 微调策略在验证集上的准确率随 Epoch 变化趋势对比</i></p>
+
+---
