@@ -19,12 +19,8 @@
 ### 📊 结果可视化
 *(提示：在这里插入你做 PPT 用的 Loss 曲线图和注意力热力图)*
 <div align="center">
-  <img src="[<img width="828" height="493" alt="image" src="https://github.com/user-attachments/assets/5950c359-cd4c-417e-bfc8-086f9e56f293" />
-]" width="45%" />
-  <img src="[<img width="739" height="467" alt="image" src="https://github.com/user-attachments/assets/624463d4-1175-46fa-aa01-e49817c6d05b" />
-]" width="45%" />
-  <img src="[<img width="739" height="467" alt="image" src="https://github.com/user-attachments/assets/cfc6bf8c-2772-4754-beab-09d89aecd3fd" />
-]" width="45%" />
+  <img src="[<img width="828" height="493" alt="image" src="https://github.com/user-attachments/assets/bd36b975-e6b9-48f7-bae0-c14a9a743ca0" />]" width="45%" />
+  <img src="[你的注意力热力图图片链接]" width="45%" />
 </div>
 <p align="center"><i>图 1：左图为引入 Noam 调度后的 Loss 收敛曲线；右图为交叉注意力机制的词汇对齐热力图</i></p>
 
@@ -42,9 +38,10 @@
 ### 📊 效能对比
 *(提示：在这里插入你那张极其漂亮的 PEFT 准确率对比折线图)*
 <div align="center">
-  <img src="[<img width="1068" height="628" alt="image" src="https://github.com/user-attachments/assets/c37e953d-d8e2-49c9-9430-1edad7eb08e2" />
-]" width="70%" />
+  <img src="[<img width="1068" height="628" alt="image" src="https://github.com/user-attachments/assets/320f966f-b0b3-4946-8858-a3f8f58c2e1c" />]" width="70%" />
 </div>
-<p align="center"><i>不同 PEFT 微调策略在验证集上的准确率随 Epoch 变化趋势对比</i></p>
+<p align="center"><i>图 2：不同 PEFT 微调策略在验证集上的准确率随 Epoch 变化趋势对比</i></p>
 
 ---
+
+
