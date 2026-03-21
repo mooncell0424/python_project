@@ -16,14 +16,6 @@
 - **训练优化：** 实践了主流的训练技巧，验证了标签平滑（Label Smoothing）与 Noam 学习率调度对模型收敛的积极作用，并加入早停机制防止过拟合。
 - **推理评估：** 使用 BLEU-4 指标完成翻译质量的量化评估；通过绘制注意力热力图，直观观察了模型在翻译过程中的词汇对齐与注意力分布情况。
 
-### 📊 结果可视化
-*(提示：在这里插入你做 PPT 用的 Loss 曲线图和注意力热力图)*
-<div align="center">
-  <img src="[<img width="828" height="493" alt="image" src="https://github.com/user-attachments/assets/bd36b975-e6b9-48f7-bae0-c14a9a743ca0" />]" width="45%" />
-  <img src="[你的注意力热力图图片链接]" width="45%" />
-</div>
-<p align="center"><i>图 1：左图为引入 Noam 调度后的 Loss 收敛曲线；右图为交叉注意力机制的词汇对齐热力图</i></p>
-
 ---
 
 ## 🔬 项目二：大语言模型微调与 PEFT 算法对比分析
@@ -34,13 +26,6 @@
 - **微调流程跑通：** 熟悉 Hugging Face 生态基础调用。在 AutoDL 算力下，跑通了 GLM4-9B 模型的指令微调流程，掌握了数据预处理及微调脚本的配置运行。
 - **微调算法探究：** 在阿里云平台上，以经典的 BERT 模型为基座，结合 SST-2 情感分类数据集，尝试编写并测试了 LoRA 与 Prefix-Tuning 的基础实现代码，验证了算法逻辑。
 - **策略对比学习：** 梳理了 LoRA、P-Tuning、Adapter     等主流 PEFT 技术的结构差异。设计并执行了多组对比实验，初步量化分析了不同微调策略对验证集准确率的影响。
-
-### 📊 效能对比
-*(提示：在这里插入你那张极其漂亮的 PEFT 准确率对比折线图)*
-<div align="center">
-  <img src="[<img width="1068" height="628" alt="image" src="https://github.com/user-attachments/assets/320f966f-b0b3-4946-8858-a3f8f58c2e1c" />]" width="70%" />
-</div>
-<p align="center"><i>图 2：不同 PEFT 微调策略在验证集上的准确率随 Epoch 变化趋势对比</i></p>
 
 ---
 
